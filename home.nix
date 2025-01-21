@@ -24,9 +24,9 @@
     enable = true;
     shellAbbrs = {
       "refresh" = "sudo nixos-rebuild switch";
-      "config" = "sudo nano /etc/nixos/configuration.nix";
-      "flake" = "sudo nano /etc/nixos/flake.nix";
-      "home" = "sudo nano /etc/nixos/home.nix";
+      "config" = "nano /etc/nixos/configuration.nix";
+      "flake" = "nano /etc/nixos/flake.nix";
+      "home" = "nano /etc/nixos/home.nix";
       "update" = "pushd /etc/nixos; and nix flake update; and popd";
       "upgrade" = "pushd /etc/nixos; and sudo nixos-rebuild switch --flake .; and popd";
       "gc" = "nix-collect-garbage -d";
@@ -61,9 +61,9 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
-    extensions = [
-      pkgs.vscode-extensions.bbenoist.nix
-      pkgs.vscode-extensions.mkhl.direnv
+    extensions = with pkgs; [
+      vscode-extensions.bbenoist.nix
+      vscode-extensions.mkhl.direnv
     ];
   };
   programs.direnv = {
