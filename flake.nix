@@ -16,7 +16,6 @@
     nixosConfigurations = {
       cring = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit secrets; };
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
