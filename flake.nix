@@ -10,13 +10,15 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, ... }:
+    let secrets = import ./secrets.nix; in
+   {
     nixosConfigurations = {
       cring = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit secrets; };
         modules = [
           ./configuration.nix
-
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

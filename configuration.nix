@@ -4,9 +4,6 @@
 
 { config, pkgs, ... }:
 
-let
-  secrets = import ./secrets.nix;
-in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -30,7 +27,7 @@ in
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = secrets.timezone;
+  time.timeZone = "Asia/Singapore";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
@@ -86,7 +83,7 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tropicbliss = {
     isNormalUser = true;
-    description = secrets.name;
+    description = "Eugene Toh";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
