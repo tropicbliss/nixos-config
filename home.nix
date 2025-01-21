@@ -63,6 +63,7 @@
     package = pkgs.vscodium;
     extensions = [
       pkgs.vscode-extensions.bbenoist.nix
+      pkgs.vscode-extensions.mkhl.direnv
     ];
   };
   programs.direnv = {
