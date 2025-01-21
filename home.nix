@@ -16,6 +16,7 @@
     inputs.zen-browser.packages."${pkgs.system}".default
     python314
     nodejs_22
+    zulu23
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
