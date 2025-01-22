@@ -20,6 +20,7 @@
     papirus-icon-theme
     devenv
     devbox
+    airshipper
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
