@@ -19,6 +19,7 @@
     zulu23
     papirus-icon-theme
     devenv
+    devbox
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
