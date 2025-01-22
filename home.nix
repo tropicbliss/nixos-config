@@ -17,6 +17,7 @@
     python314
     nodejs_22
     zulu23
+    papirus-icon-theme
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
@@ -69,5 +70,12 @@
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
+  };
+  programs.plasma = {
+    enable = true;
+    workspace = {
+      lookAndFeel = "org.kde.breezedark.desktop";
+      iconTheme = "Papirus-Dark";
+    };
   };
 }
