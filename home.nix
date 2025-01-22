@@ -56,6 +56,7 @@
     };
     ignores = [
       ".envrc"
+      ".direnv"
     ];
   };
   programs.ripgrep.enable = true;
