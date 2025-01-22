@@ -58,6 +58,9 @@
     ignores = [
       ".envrc"
       ".direnv"
+      ".devbox"
+      "devbox.json"
+      "devbox.lock"
     ];
   };
   programs.ripgrep.enable = true;
