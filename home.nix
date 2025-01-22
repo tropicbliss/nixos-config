@@ -84,7 +84,7 @@
         vendorId = "093a";
         productId = "0255";
         naturalScroll = true;
-        scrollSpeed = 0.15;
+        scrollSpeed = 0.1;
       }
     ];
   };
