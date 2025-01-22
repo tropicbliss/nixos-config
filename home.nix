@@ -76,6 +76,7 @@
     workspace = {
       lookAndFeel = "org.kde.breezedark.desktop";
       iconTheme = "Papirus-Dark";
+      wallpaper = "${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/Patak/contents/images/1080x1920.png";
     };
     input.touchpads = [
       {
