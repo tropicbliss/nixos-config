@@ -18,6 +18,7 @@
     nodejs_22
     zulu23
     papirus-icon-theme
+    devenv
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
