@@ -53,6 +53,9 @@
       init.defaultBranch = "main";
       core.editor = "codium --wait";
     };
+    ignores = [
+      ".envrc"
+    ];
   };
   programs.ripgrep.enable = true;
   programs.chromium.enable = true;
