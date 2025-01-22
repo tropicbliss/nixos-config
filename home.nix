@@ -77,5 +77,15 @@
       lookAndFeel = "org.kde.breezedark.desktop";
       iconTheme = "Papirus-Dark";
     };
+    input.touchpads = [
+      {
+        enable = true;
+        name = "UNIW0001:00 093A:0255 Touchpad";
+        vendorId = "093a";
+        productId = "0255";
+        naturalScroll = true;
+        scrollSpeed = 0.1;
+      }
+    ];
   };
 }
