@@ -35,6 +35,7 @@
       "upgrade" = "pushd /etc/nixos; and sudo nixos-rebuild switch --flake .; and popd";
       "gc" = "nix-collect-garbage -d";
       "create" = "nix flake init --template github:cachix/devenv";
+      "orgcreate" = "devbox init";
     };
   };
   programs.bash = {
