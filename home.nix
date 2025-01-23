@@ -18,7 +18,6 @@
     nodejs_22
     zulu23
     papirus-icon-theme
-    devenv
     devbox
     airshipper
     whois
