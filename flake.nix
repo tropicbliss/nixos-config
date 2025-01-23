@@ -13,9 +13,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    inputs.agenix.url = "github:ryantm/agenix";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, plasma-manager, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, plasma-manager, agenix, ... }:
     let secrets = import ./secrets.nix; in
    {
     nixosConfigurations = {
@@ -23,6 +24,7 @@
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
+          agenix.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
