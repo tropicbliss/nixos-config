@@ -30,6 +30,8 @@
             home-manager.users.tropicbliss = import ./home.nix;
             home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+            nix.settings.experimental-features = [ "nix-command" "flakes" ];
+            programs.command-not-found.enable = false;
           }
         ];
       };
