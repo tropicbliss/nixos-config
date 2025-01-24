@@ -14,13 +14,9 @@
     modrinth-app
     android-studio
     inputs.zen-browser.packages."${pkgs.system}".default
-    python314
-    nodejs_22
-    zulu23
     papirus-icon-theme
     devbox
     airshipper
-    whois
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
@@ -36,6 +32,10 @@
       "gc" = "nix-collect-garbage -d";
       "create" = "nix flake init --template github:cachix/devenv";
       "orgcreate" = "devbox init";
+      "repl" = "temp python314 nodejs_22 zulu23";
+    };
+    functions = {
+      "temp" = "nix-shell -p $argv";
     };
   };
   programs.bash = {
