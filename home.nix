@@ -31,7 +31,7 @@
       "upgrade" = "pushd /etc/nixos; and sudo nixos-rebuild switch --flake .; and popd";
       "gc" = "nix-collect-garbage -d";
       "create" = "nix flake init --template github:cachix/devenv";
-      "orgcreate" = "devbox init";
+      "orgcreate" = "devbox init; and devbox generate direnv";
       "repl" = "temp python314 nodejs_22 zulu23";
     };
     functions = {
