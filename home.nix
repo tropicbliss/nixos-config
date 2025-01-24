@@ -17,6 +17,7 @@
     papirus-icon-theme
     devbox
     airshipper
+    jetbrains.idea-community-bin
   ];
   home.stateVersion = "24.11";
   programs.home-manager.enable = true;
