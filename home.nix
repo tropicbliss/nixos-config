@@ -78,6 +78,8 @@
       bbenoist.nix
       mkhl.direnv
       svelte.svelte-vscode
+      rust-lang.rust-analyzer
+      redhat.java
     ];
   };
   programs.direnv = {
